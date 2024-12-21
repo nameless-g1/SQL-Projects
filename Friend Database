@@ -1,0 +1,44 @@
+----Creating table with friends id, names, and birthday
+
+create table friends (id INTEGER , name TEXT , Birthday Date);
+insert into friends (id , NAME , birthday)
+Values (1, 'Ororo Munroe', '1940-05-30');
+
+--- inserting 2 extra names of friends
+
+insert into friends (id, name, birthday)
+values (2, 'Tiara Smith', '2000-11-29');
+insert into friends (id, name, birthday)
+values (3, 'Gione Buchanan', '2000-12-05');
+
+---updating Ororo name to storm for some weird reason
+
+update friends
+set name = 'storm'
+where id = 1;
+
+-----adding email column to table
+
+alter table friends 
+add column 'email' text;
+
+----Updating email in table for everyone 
+update friends
+set email = 'storm@codeacademy.com'
+where id = 1;
+
+update friends 
+set email = 'gionebuch@icloud.com'
+where id = 3;
+
+update friends 
+set email = 'tiarasmith9@icloud.com'
+where id = 2;
+
+---- removing storm from friends due to her being fictional 
+
+delete from friends
+where id = 1;
+
+select *
+from friends
